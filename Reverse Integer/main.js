@@ -27,4 +27,4 @@ var reverse = function (x) {
 // console.log(reverse(120)); // 21
 // console.log(reverse(-123)); // -321
 // console.log(reverse(-987142)); // -241789
-console.log(reverse(214748364)); // 463847412
+// console.log(reverse(214748364)); // 463847412
