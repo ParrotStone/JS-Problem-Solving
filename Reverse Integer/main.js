@@ -23,6 +23,21 @@ var reverse = function (x) {
     return reversed;
 };
 
+// // Another way to solve the same problem using built-in methods in JS
+// var reverse = function (x) {
+//     let tempNum = Math.abs(x).toString();
+//     let tempArr = Array.from(tempNum);
+//     let tempReversedArr = tempArr.reverse().join('');
+
+//     const reversed = Number(tempReversedArr) * (x / Math.abs(x));
+//     if (reversed > ((2 ** 31) - 1) || reversed < -(2 ** 31) || isNaN(reversed)) {
+//         return 0;
+//     }
+
+
+//     return reversed;
+// }
+
 // console.log(reverse(123));  // 321
 // console.log(reverse(120)); // 21
 // console.log(reverse(-123)); // -321
