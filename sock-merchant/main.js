@@ -22,7 +22,7 @@ function sockMerchant(num, colors) {
             numOfSocks++;
         }
 
-        if (temp[i] != temp[i + 1] | i == num - 2) {
+        if (temp[i] != temp[i + 1] || i == num - 2) {
             numOfPairs += parseInt(numOfSocks / 2);
             numOfSocks = 1;
         }
