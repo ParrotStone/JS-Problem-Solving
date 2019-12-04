@@ -12,7 +12,7 @@ var numJewelsInStones = function(J, S) {
     let count = 0;
     for (let i = 0; i < J.length; i++) {
         count += [...S].reduce((a, c) => {
-            return (J[i] == c) ? a + 1 : a;
+            return (J[i] == c) ? ++a : a;
 
         }, 0);
     }
