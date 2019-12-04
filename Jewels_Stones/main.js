@@ -11,14 +11,7 @@ var numJewelsInStones = function(J, S) {
     // First approach
     let count = 0;
     for (let i = 0; i < J.length; i++) {
-<<<<<<< HEAD
-        count += [...S].reduce((a, c) => {
-            return (J[i] == c) ? ++a : a;
-
-        }, 0);
-=======
-        count += [...S].reduce((a, c) => (J[i] == c) ? a + 1 : a, 0);
->>>>>>> b9a8ac7658857e5fbfe29c7fefaea39100f44a7c
+        count += [...S].reduce((a, c) => (J[i] == c) ? ++a : a, 0);
     }
     
     return count;
