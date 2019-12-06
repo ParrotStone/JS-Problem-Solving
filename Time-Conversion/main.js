@@ -6,7 +6,7 @@
 
 /**
  * @param {string} inputStr
- * @description String input representing the date in 12 format
+ * @description String input representing the date in 12 hour(PM/AM) format
  */
 function timeConverter(inputStr) {
     const parts = inputStr.split(':');
