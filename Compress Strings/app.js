@@ -1,3 +1,11 @@
+/*
+	Description:
+	Given a string, count the number of occurrences of all of its letters.
+	Some cases:
+	'aabbcc' => { a: 2, b: 2, c: 2 }
+	'abcccd' => { a: 1, b: 1, c: 3, d: 1 }
+*/
+
 // First way
 
 const exampleOne = 'aabbcc';  // a2b2c2
