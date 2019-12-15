@@ -7,40 +7,40 @@
     You should have a stopwatch object which can be started, stopped and resetted. U can get the duration off of it, with the duration added up on its previous values unless it's resetted. Handle the cases where the stopwatch might be started again/stopped again.
 */
 
-function Stopwatch() {
-    // Private members of the obj
-    let started = false;
-    let startTime = 0;
-    let stopTime = 0;
 
+function Stopwatch() {
+    // Private members of the Stopwatch object
     let duration = 0;
     Object.defineProperty(this, 'duration', {
         get: function () {
-            return duration;
+            return (duration / 1000).toFixed(2);
         }
     });
 
-    this.start = function () {
-        if (started)
-            throw new Error('Stopwatch already started!');
+    let startTime = undefined;
+    this.running = false;
 
-        started = true;
-        startTime = Date.now();
+    this.start = function () {
+        if (this.started)
+            throw new Error('Stopwatch already started.');
+
+        this.running = true;
+
+        startTime = new Date().getTime();
     };
 
     this.stop = function () {
-        if (!started)
-            throw new Error('Stopwach already stopped!');
+        if (this.stopped)
+            throw new Error('Stopwatch already stopped.');
 
-        started = false;
-        stopTime = Date.now();
-        duration += (stopTime - startTime) / 1000;
+        this.running = false;
+
+        duration += (new Date().getTime() - startTime);
     };
 
     this.reset = function () {
+        this.running = false;
+        startTime = undefined;
         duration = 0;
-        startTime = 0;
-        stopTime = 0;
-        started = false;
-    }
-};
+    };
+}
