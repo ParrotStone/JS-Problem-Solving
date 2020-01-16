@@ -8,14 +8,8 @@ function countApplesAndOranges(s, t, a, b, apples, oranges) {
     apples = apples.map(apple => apple + a);
     oranges = oranges.map(orange => orange + b);
 
-    const numOfApples = apples.reduce((a, c) => {
-        return c >= s && c <= t ? a + 1 : a;
-    }, 0);
-
-
-    const numOfOranges = oranges.reduce((a, c) => {
-        return c >= s && c <= t ? a + 1 : a;
-    }, 0);
+    const numOfApples = apples.reduce((a, c) => c >= s && c <= t ? a + 1 : a, 0);
+    const numOfOranges = oranges.reduce((a, c) => c >= s && c <= t ? a + 1 : a, 0);
 
     console.log(numOfApples);
     console.log(numOfOranges);
