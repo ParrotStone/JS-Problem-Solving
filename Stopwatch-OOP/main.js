@@ -17,29 +17,29 @@ function Stopwatch() {
         }
     });
 
-    let startTime = undefined;
-    this.running = false;
+    let startTime;
+    let running = false;
 
     this.start = function () {
-        if (this.started)
+        if (running)
             throw new Error('Stopwatch already started.');
 
-        this.running = true;
+        running = true;
 
         startTime = new Date().getTime();
     };
 
     this.stop = function () {
-        if (this.stopped)
+        if (!running)
             throw new Error('Stopwatch already stopped.');
 
-        this.running = false;
+        running = false;
 
         duration += (new Date().getTime() - startTime);
     };
 
     this.reset = function () {
-        this.running = false;
+        running = false;
         startTime = undefined;
         duration = 0;
     };
