@@ -7,6 +7,7 @@ console.log(birthday([2, 2, 1, 3, 2], 4, 2)); // 2
 // console.log(birthday([1, 2, 1, 3, 2], 3, 2)); // 2
 
 function birthday(s, d, m) {
+  // Corner case
   if (s.length === m && s[0] === d) return 1;
 
   let numOfWays = 0;
@@ -20,6 +21,9 @@ function birthday(s, d, m) {
       if (sum === d && monthLength === m) {
         numOfWays++;
       }
+      
+      // To ignore irrelevant cases
+      if (sum > d || monthLength > m) break;
     }
   }
 
