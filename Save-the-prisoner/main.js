@@ -31,4 +31,9 @@ function saveThePrisoner(n, m, s) {
   const lastPrisoner = (seatDiff + remainingSweets) % n;
 
   return lastPrisoner === 0 ? n : lastPrisoner;
+
+  // // Shorter form of the above solution
+  // if (m === 0) return 0;
+  // let totalNumOfSweets = m + s - 1;
+  // return totalNumOfSweets % n == 0 ? n : totalNumOfSweets % n;
 }
