@@ -5,6 +5,7 @@
 // There is another solution that w/ LCD and GCD, but the use of it here is irrelevant because the problem description dictates that the length of the input arrays wouldn't go over 10 elements, meaning that more efficient algorithm here won't make a difference in the performance.
 
 console.log(getTotalX([2, 6], [24, 36])); // 2
+// console.log(getTotalX([3, 4], [24, 48])); // 2
 // console.log(getTotalX([2, 4], [16, 32, 96])); // 3
 
 function getTotalX(a, b) {
