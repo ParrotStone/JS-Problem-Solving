@@ -2,73 +2,8 @@
 
 // Problem Description ->> https://www.hackerrank.com/challenges/designer-pdf-viewer/problem
 
-console.log(
-  designerPdfViewer(
-    [
-      1,
-      3,
-      1,
-      3,
-      1,
-      4,
-      1,
-      3,
-      2,
-      5,
-      5,
-      5,
-      5,
-      5,
-      5,
-      5,
-      5,
-      5,
-      5,
-      5,
-      5,
-      5,
-      5,
-      5,
-      5,
-      5
-    ],
-    "abc"
-  )
-); // 9
-
-console.log(
-  designerPdfViewer(
-    [
-      1,
-      3,
-      1,
-      3,
-      1,
-      4,
-      1,
-      3,
-      2,
-      5,
-      5,
-      5,
-      5,
-      5,
-      5,
-      5,
-      5,
-      5,
-      5,
-      5,
-      5,
-      5,
-      5,
-      5,
-      5,
-      7
-    ],
-    "zaba"
-  )
-); // 28
+console.log(designerPdfViewer([1, 3, 1, 3, 1, 4, 1, 3, 2, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5], "abc")); // 9
+console.log(designerPdfViewer([1, 3, 1, 3, 1, 4, 1, 3, 2, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 7], "zaba")); // 28
 
 function designerPdfViewer(h, word) {
   const chars = [];
