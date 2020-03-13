@@ -21,9 +21,19 @@ function pageCount(n, p) {
   }
 
   return Math.min(minFront, minBack);
+
+  // // OR - Another simpler solution
+  // // TotalPgCount, since every turn contains two pages - this way we get the total count
+  // const totalPgCount = Math.floor(n / 2);
+  // // The count starting from the left(1, ...etc)
+  // const leftPgCount = Math.floor(p / 2);
+  // // The count from the right/back side of the book
+  // const rightPgCount = totalPgCount - leftPgCount;
+
+  // return Math.min(leftPgCount, rightPgCount);
 }
 
-// 1 - 2, 3 - 4, 5 - 6, 7
+
 console.log(pageCount(7, 4)); // 1
 // console.log(pageCount(5809, 2668)); // 1334 -> From the front of the book
 // console.log(pageCount(1000, 3)); // 1 -> from the front of the book
