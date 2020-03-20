@@ -7,6 +7,8 @@ function howManyGames(p, d, m, s) {
   while (s >= m && (s - p) >= 0) {
     s -= p;
     p = ((p - d) <= m) ? m : (p - d);
+    // OR
+    // p = Math.max(m, p - d);
     numOfGames++;
   }
 

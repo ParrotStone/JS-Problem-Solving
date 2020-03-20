@@ -12,6 +12,15 @@ function equalizeArray(arr) {
   }
 
   return minLength;
+
+  // // A more efficient solution, O(n) time complexity
+  // // Array for counting the frequency, also called Hashmap
+  // const frequency = [];
+
+  // for (let i = 0; i <= 100; i++) frequency[i] = 0;
+  // for (let i = 0; i < arr.length; i++) frequency[arr[i]]++;
+
+  // return arr.length - Math.max(...frequency);
 }
 
 // Test cases
@@ -19,4 +28,3 @@ console.log(equalizeArray([1, 2, 2, 3])); // 2
 console.log(equalizeArray([3, 3, 2, 1, 3])); // 2
 console.log(equalizeArray([1, 2, 3, 1, 2, 3, 3, 3])); // 4
 console.log(equalizeArray([-1, 2, -1, 1, 2, 3, 3, 3])); // 5
-
