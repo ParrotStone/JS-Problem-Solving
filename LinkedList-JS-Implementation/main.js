@@ -81,7 +81,7 @@ class LinkedList {
   }
 
   getAtIndex(index) {
-    if (index >= this.size) {
+    if (index >= this.size || index < 0) {
       throw new Error(
         "Index exceeded the LinkedList length, enter a proper value!"
       );
@@ -89,13 +89,12 @@ class LinkedList {
 
     let i = 0;
     let current = this.head;
-    while (current) {
-      if (i === index) return current;
+    while (i < index) {
       i++;
       current = current.next;
     }
 
-    return null;
+    return current;
   }
 
   getSize() {
